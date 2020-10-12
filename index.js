@@ -19,7 +19,6 @@ const interestRate  = 0.3;
 //interestRate = 1;
 console.log(interestRate);
 
-<<<<<<< HEAD
 
 //let name = 'Mosh';
 let isApproved = true;
@@ -46,10 +45,3 @@ person['selection'] = 'Mary';
 console.log(person.name);
 
 
-=======
-let name = 'Mosh';
-let age = 30;
-let isApproved = true;
-let firstName = undefined;
-let lastName = null; // We use null in situations to clear the value of variable.
->>>>>>> 7ca4204f019dd3ccb5b054257542346e8e533099
