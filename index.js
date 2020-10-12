@@ -1,9 +1,9 @@
 // This is an sample of JavaScript Code!!
 console.log('Hello World!');
 
+
 // This is related to 8.1 lesson, named "Variables"
 
-let name = 'Mosh';
 console.log(name);
 
 /* To naming variables in JS, 
@@ -16,31 +16,32 @@ console.log(name);
 */
 
 const interestRate  = 0.3;
-interestRate = 1;
+//interestRate = 1;
 console.log(interestRate);
 
 
-let name = 'Mosh';
-let age = 30;
+//let name = 'Mosh';
 let isApproved = true;
 let firstName = undefined;
 let lastName = null; // We use null in situations to clear the value of variable.
 
+// Objects
+
+let person = {
+    name: 'Mosh',
+    age: 30
+};
 
 
+// Dot notation
+person.name= 'John';
+console.log(person.name);
 
+// Bracket Notation.
+let selection = 'name'
 
+person['selection'] = 'Mary';
 
-
-
-
-
-
-
-
-
-
-
-
+console.log(person.name);
 
 
