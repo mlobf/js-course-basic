@@ -79,7 +79,7 @@ console.log(eligibleForLoan);
 // Logical OR (||) 
 
 // This will return TRUE if one of operands id TRUE.
-
+/*
 console.log('Eligible For Loan')
 
 console.log('Logical OR')
@@ -89,8 +89,56 @@ let goodCreditScore = false;
 let eligibleForLoan = highIncome || goodCreditScore;
 
 console.log(eligibleForLoan);
+*/
+// NOT (!) 
+
+console.log('Eligible For Loan')
+
+console.log('Logical OR')
+
+let highIncome = false;
+let goodCreditScore = false;
+let eligibleForLoan = highIncome || goodCreditScore;
+
+console.log('Eligible ', eligibleForLoan);
+
+let applicationRefused = !eligibleForLoan;
+
+console.log('Application Refused ', applicationRefused);
+
+// Logical operators with non Boolean.
+// Falsy (false)
+// undefined
+// null
+// 0
+// false
+// ''
+// NaN
+
+// Anything is not Falsy -> Truthy
+
+let userColor = undefined;
+let defaultColor = 'blue';
+let currentColor = userColor || defaultColor;
+
+console.log(currentColor);
+
+// Operator Precedence.
+
+let f = (2 + 3) * 4;
+
+console.log(f);
+
+// Exercise , Swap Values. 
+
+let a = 'red';
+let b = 'blue';
+
+let c = a;
+a = b;
+b = c;
 
 
-
-
+console.log(a);
+console.log(b);
 
