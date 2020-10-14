@@ -97,18 +97,3 @@ for (let index in colors)
 //For...of Loop; BBF of Array S2
 for (let color of colors)
     console.log(color);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
