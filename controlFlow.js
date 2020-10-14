@@ -97,3 +97,27 @@ for (let index in colors)
 //For...of Loop; BBF of Array S2
 for (let color of colors)
     console.log(color);
+
+//Break and continue.
+console.log("Break an Continue");
+let t = 0;
+while (t <= 10) {
+    //if (t === 5) break;// Break go out of loop.
+    if (t % 2 === 0){
+        t++;
+        continue;//Continue go to the next iteration.
+    }
+    console.log(t);
+    t++;
+}
+//Exercise.
+// Write a functions that takes two numbers and returns the maximum of two.
+let number = max(5,60);
+console.log(number);
+
+function max(number1, number2){
+    //if (number1 > number2) return number1;
+    //else return number2;
+    //Using Conditional Operator
+    return (number1 > number2) ? number1 : number2;
+}
