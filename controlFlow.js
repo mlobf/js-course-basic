@@ -103,21 +103,75 @@ console.log("Break an Continue");
 let t = 0;
 while (t <= 10) {
     //if (t === 5) break;// Break go out of loop.
-    if (t % 2 === 0){
+    if (t % 2 === 0) {
         t++;
-        continue;//Continue go to the next iteration.
+        continue; //Continue go to the next iteration.
     }
     console.log(t);
     t++;
 }
 //Exercise.
 // Write a functions that takes two numbers and returns the maximum of two.
-let number = max(5,60);
+let number = max(5, 60);
 console.log(number);
 
-function max(number1, number2){
+function max(number1, number2) {
     //if (number1 > number2) return number1;
     //else return number2;
     //Using Conditional Operator
     return (number1 > number2) ? number1 : number2;
 }
+//Function isLandScape, shall return true or false.
+
+
+console.log(isLandScape(555, 33));
+
+function isLandScape(width, height) {
+    return (width > height);
+}
+
+//fizzBuzz problem.
+/*
+If the number is / by 3 = fizz;
+if the number is / by 5 = buzz;
+if the number is / by 3 and 5 = fizzBuzz;
+if the number is not / by 3 or 5 or 3 and 5 = return the number;
+if the number is not a number = print("It's not a number")
+*/
+console.log('FizzBuzz Challenge!!!!')
+console.log(' ------- ')
+
+const output = fizzBuzz(false);
+console.log(output);
+
+function fizzBuzz(input) {
+    if (typeof input !== 'number')
+        return NaN;
+
+    if ((input % 3 === 0) && (input % 5 === 0))
+        return 'FizzBuzz';
+
+    if (input % 3 === 0)
+        return 'Fizz';
+
+    if (input % 5 === 0)
+        return 'Buzz';
+
+    return input;
+}
+
+/*
+    Speed Limited.
+        Max Speed = 70
+        5 -> + 1 point
+        Math.floor(1.3)
+        12 points -> suspended
+        Below Max Speed = Ok 
+*/
+
+console.log('Speed Challenge !!!!')
+console.log(' ------- ')
+
+
+//const output = speedChallenge(30);
+//console.log(output);
