@@ -175,3 +175,21 @@ console.log(' ------- ')
 
 //const output = speedChallenge(30);
 //console.log(output);
+
+checkSpeed(75);
+
+function checkSpeed(speed) {
+    const maxSpeed = 70;
+    const kilometerPerPoint = 5;
+
+    if (speed < maxSpeed + kilometerPerPoint)
+        console.log('OK');
+    else {
+        const points = Math.floor((speed - maxSpeed) / kilometerPerPoint);
+        if (points >= 12)
+            console.log('No more drive license for you!!');
+        else {
+            console.log('Points ', points);
+        }
+    }
+}
