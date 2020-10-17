@@ -196,3 +196,74 @@ function checkSpeed(speed) {
 
 // Count Truthy
 
+/*
+function countTruthy(array){
+
+}
+*/
+
+//  Falsy 
+//  undefined
+//  null
+//  ''
+//  false
+//  0
+//   NaN
+
+// My task here is create an function which does count all Truthy values.
+
+
+const array = [1, 2, 3, 4, 5, 6, 3, 2, 1];
+console.log(countTruthy(array));
+
+function countTruthy(array) {
+    let count = 0;
+    for (let value of array)
+        if (value)
+            count++;
+    return count;
+}
+
+
+// String Properties,
+// This function has to show all string's properties.
+
+
+console.log(" ")
+console.log(" ")
+console.log("Show me your string!")
+console.log(" ")
+console.log(" ")
+
+
+const movie = {
+    title: 'a',
+    realizeYear: 2018,
+    rating: 4.5,
+    director: 'b'
+};
+
+showProperties(movie);
+
+function showProperties(obj) {
+    for (let key in obj) {
+        if (typeof obj[key] === 'string')
+            console.log(key, obj[key]);
+    }
+}
+
+//Sum of multiples 3 and 5.
+// Multiples of 3: 3, 6, 9.
+// Multiples of 5: 5, 10.
+
+
+console.log(sum(10));
+
+function sum(number) {
+    if (number % 3 || number % 5)
+        console
+}
+
+
+
+
