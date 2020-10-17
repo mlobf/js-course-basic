@@ -259,11 +259,49 @@ function showProperties(obj) {
 
 console.log(sum(10));
 
-function sum(number) {
-    if (number % 3 || number % 5)
-        console
+function sum(limit) {
+    let sum = 0;
+
+    for (let i = 0; i <= limit; i++)
+        if (i % 3 === 0 || i % 5 === 0)
+            sum += i;
+
+    return sum;
 }
 
 
+// Grade
+// Calculate a Grade of student
+// Simple average calculation
 
+// 1-59: F
+// 60-69:D
+// 70-79:C
+// 80-89:B
+// 90-100:A
+//--------------------------------------------------
+const marks = [80, 80, 90];
+
+console.log(calculateGrade(marks));
+
+function calculateGrade(marks) {
+    let sum = 0;
+
+    for (let mark of marks)
+        sum += mark;
+
+    let average = sum / marks.length;
+
+    if (average < 60) return 'F';
+    if (average < 70) return 'D';
+    if (average < 80) return 'C';
+    if (average < 90) return 'B';
+    else return "A";
+
+}
+//--------------------------------------------------
+console.log(" ")
+console.log(" Now solving using the SINGLE RESPONSIBILITY PRINCIPLE")
+console.log(" ")
+//--------------------------------------------------
 
