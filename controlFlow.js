@@ -193,3 +193,6 @@ function checkSpeed(speed) {
         }
     }
 }
+
+// Count Truthy
+
