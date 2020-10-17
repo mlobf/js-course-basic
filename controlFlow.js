@@ -300,8 +300,53 @@ function calculateGrade(marks) {
 
 }
 //--------------------------------------------------
-console.log(" ")
-console.log(" Now solving using the SINGLE RESPONSIBILITY PRINCIPLE")
-console.log(" ")
+console.log(" ");
+console.log(" Now solving using the SINGLE RESPONSIBILITY PRINCIPLE");
+console.log(" ");
 //--------------------------------------------------
 
+function calculeAverage(array) {
+    let sum = 0;
+    for (let value of array)
+        sum += value;
+    return sum / array.length;
+}
+
+function showStars(rows) {
+    for (let row = 1; row <= rows; row++) {
+        let pattern = '';
+        for (let i = 0; i < row; i++)
+            pattern += '*';
+        console.log(pattern);
+    }
+}
+
+
+showStars(29);
+
+function showStars(rows) {
+    for (let row = 1; row <= rows; row++) {
+        let pattern = '';
+        for (let i = 0; i < row; i++)
+            pattern += '*';
+        console.log(pattern);
+    }
+}
+
+// Show Primes, lesson 47
+
+showPrimes(100);
+
+function showPrimes(limit) {
+    for (let number = 2; number <= limit; number++) {
+
+        let isPrime = true;
+        for (let factor = 2; factor < number; factor++) {
+            if (number % factor === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) console.log(number);
+    }
+}
