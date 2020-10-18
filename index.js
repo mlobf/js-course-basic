@@ -1,10 +1,8 @@
 // This is an sample of JavaScript Code!!
 console.log('Hello World!');
 
-
 // This is related to 8.1 lesson, named "Variables"
 let name = 'Mosh'
-
 console.log(name);
 
 /* To naming variables in JS, 
@@ -18,8 +16,8 @@ console.log(name);
 
 const interestRate = 0.3;
 //interestRate = 1;
+// Variables defined with const behave like let variables, except they cannot be reassigned:
 console.log(interestRate);
-
 
 //let name = 'Mosh';
 let isApproved = true;
@@ -33,7 +31,6 @@ let person = {
     age: 30
 };
 
-
 // Dot notation
 person.name = 'John';
 console.log(person.name);
@@ -44,7 +41,6 @@ let selection = 'name'
 person['selection'] = 'Mary';
 
 console.log(person.name);
-
 
 //Arrays
 
@@ -58,7 +54,6 @@ function greet(name, lastName) {
 }
 greet('John', 'MacLoud');
 greet('Mary', 'da Silva');
-
 
 //Performing a task.
 function greet(name, lastName) {

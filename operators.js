@@ -14,7 +14,6 @@ console.log(x++);
 console.log(x);
 
 //Decrement
-
 console.log(" Decrement -- ")
 console.log(--x);
 
@@ -120,9 +119,7 @@ console.log('Application Refused ', applicationRefused);
 let userColor = undefined;
 let defaultColor = 'blue';
 let currentColor = userColor || defaultColor;
-
 console.log(currentColor);
-
 // Operator Precedence.
 
 let f = (2 + 3) * 4;
@@ -137,7 +134,6 @@ let b = 'blue';
 let c = a;
 a = b;
 b = c;
-
 
 console.log(a);
 console.log(b);

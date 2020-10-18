@@ -196,3 +196,157 @@ function checkSpeed(speed) {
 
 // Count Truthy
 
+/*
+function countTruthy(array){
+
+}
+*/
+
+//  Falsy 
+//  undefined
+//  null
+//  ''
+//  false
+//  0
+//   NaN
+
+// My task here is create an function which does count all Truthy values.
+
+
+const array = [1, 2, 3, 4, 5, 6, 3, 2, 1];
+console.log(countTruthy(array));
+
+function countTruthy(array) {
+    let count = 0;
+    for (let value of array)
+        if (value)
+            count++;
+    return count;
+}
+
+
+// String Properties,
+// This function has to show all string's properties.
+
+
+console.log(" ")
+console.log(" ")
+console.log("Show me your string!")
+console.log(" ")
+console.log(" ")
+
+
+const movie = {
+    title: 'a',
+    realizeYear: 2018,
+    rating: 4.5,
+    director: 'b'
+};
+
+showProperties(movie);
+
+function showProperties(obj) {
+    for (let key in obj) {
+        if (typeof obj[key] === 'string')
+            console.log(key, obj[key]);
+    }
+}
+
+//Sum of multiples 3 and 5.
+// Multiples of 3: 3, 6, 9.
+// Multiples of 5: 5, 10.
+
+
+console.log(sum(10));
+
+function sum(limit) {
+    let sum = 0;
+
+    for (let i = 0; i <= limit; i++)
+        if (i % 3 === 0 || i % 5 === 0)
+            sum += i;
+
+    return sum;
+}
+
+
+// Grade
+// Calculate a Grade of student
+// Simple average calculation
+
+// 1-59: F
+// 60-69:D
+// 70-79:C
+// 80-89:B
+// 90-100:A
+//--------------------------------------------------
+const marks = [80, 80, 90];
+
+console.log(calculateGrade(marks));
+
+function calculateGrade(marks) {
+    let sum = 0;
+
+    for (let mark of marks)
+        sum += mark;
+
+    let average = sum / marks.length;
+
+    if (average < 60) return 'F';
+    if (average < 70) return 'D';
+    if (average < 80) return 'C';
+    if (average < 90) return 'B';
+    else return "A";
+
+}
+//--------------------------------------------------
+console.log(" ");
+console.log(" Now solving using the SINGLE RESPONSIBILITY PRINCIPLE");
+console.log(" ");
+//--------------------------------------------------
+
+function calculeAverage(array) {
+    let sum = 0;
+    for (let value of array)
+        sum += value;
+    return sum / array.length;
+}
+
+function showStars(rows) {
+    for (let row = 1; row <= rows; row++) {
+        let pattern = '';
+        for (let i = 0; i < row; i++)
+            pattern += '*';
+        console.log(pattern);
+    }
+}
+
+
+showStars(29);
+
+function showStars(rows) {
+    for (let row = 1; row <= rows; row++) {
+        let pattern = '';
+        for (let i = 0; i < row; i++)
+            pattern += '*';
+        console.log(pattern);
+    }
+}
+
+// Show Primes, lesson 47
+
+showPrimes(100);
+
+function showPrimes(limit) {
+    for (let number = 2; number <= limit; number++) {
+
+        let isPrime = true;
+        for (let factor = 2; factor < number; factor++) {
+            if (number % factor === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) console.log(number);
+    }
+}
