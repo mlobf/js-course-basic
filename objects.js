@@ -90,6 +90,152 @@ console.log(increase(number));
 console.log(number);
 
 // Lesson 55
+// Enumerating Properties of an Objects.
+//
+// Loop in | Loop out.
+
+const circle3 = {
+    radius: 1,
+    draw(){
+        console.log('draw');
+    }
+};
+
+//For in Loop;
+
+console.log("--------------------------")
+for (let key in circle3)
+    console.log(key, circle3[key]);
+console.log("--------------------------")
+
+//For of Loop, now.....
+//Using For of on non iterate objects will show an error.
+//But this can be solved using Object.keys(circle) method.
+// As result, An Array will return.
+
+
+for (let key of Object.keys(circle3))
+    console.log(key);
+
+for (let entry of Object.entries(circle3))
+    console.log(entry);
+
+
+// All functions on JS are Objects, so they has properties and Methods that 
+//  we can access using the dot notation.
+
+
+if ('color' in circle3) console.log('yes');
+
+
+// Lesson 56, Cloning an Object from other objects
+
+console.log("--------------------------")
+console.log("--------------------------")
+
+
+const circle4 = {
+    radius : 1,
+    draw(){
+        console.log('draw');
+    }
+};
+
+const another = {};
+
+    for (let key in circle4)
+        another[key]= circle4[key];
+
+console.log(another);
+        
+//const another2 = Object.assign({color: 'yellow'},circle4);
+
+
+// The spread operator ...
+
+console.log("-------The spread operator-----------");
+const another2 = {...circle4};
+
+
+console.log(another2);
+
+// Lesson 57 . The Garbage Collection.
+// Means the deallocate processes on  Javascript.
+//
+console.log("-------The Garbage Collection-----------");
+
+
+// Lesson 58 . The Math JavaScript Object.
+// Means the deallocate processes on  Javascript.
+//
+console.log("-------The Math Java Script Object-----------");
+
+console.log(Math.round(Math.random()));
+
+// Lesson 59 . String...
+// In Javascript we have two types of string.
+// 1-String Primitive
+// 2-String Object
+//
+console.log("-------String-----------");
+// Primitive,
+const message = 'This is my first message';
+// If we use it with dot notation, Javascript warp this with a String Object.
+
+// Object String.
+const another3 = new String('h1');
+// Lets show all types...
+
+console.log(typeof(message));
+console.log((message[1]));
+console.log((message[2]));
+
+//To see if the string has an especial word.
+console.log((message.includes('my')));
+
+//To see if it start with.
+//
+console.log((message.startsWith('This')));
+
+
+console.log((message.length));
+console.log(typeof(another3));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
