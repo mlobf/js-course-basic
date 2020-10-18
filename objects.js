@@ -19,13 +19,5 @@ const cicle = {
 
 // Factoring functions.
 
-
-
-
 cicle.draw(); //Method, because is related to an object.
-
-
-
-
-
 
