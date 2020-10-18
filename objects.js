@@ -62,8 +62,32 @@ const circle = new Circle(1);
 // Constructor properties. 
 //
 
+console.log(Circle.constructor);
+
+// In Javascript functions are Objects
+// In Javascript Value and Reference types. 
+// Lesson 54
+
+//Value Types, aka primitives.
+// ->Numbers, Strings, Boolean, Symbol, undefined, null.
+//Reference Types.
+// -> Object, Array, Function.
+
+// Does types has not the same behaviour.
+
+//Primitives are copied by their value.
+//Objects types are copied by  their reference.
 
 
+let number = 10;
+
+function increase(number){
+    number++;
+}
+
+console.log(" --->  ");
+console.log(increase(number));
+console.log(number);
 
 
 
