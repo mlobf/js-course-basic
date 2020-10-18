@@ -51,8 +51,16 @@ function Circle(radius){
 
 const circle = new Circle(1);
 
+// Objects in "JS" are Dynamic, 
+// You can always add, delete properties or methods.
 
+// IMPORTANT
+//  constant means you can't reassign the same variable to a new one.
+//  But, as rather of fact, it's perfect possible "crud" new methods 
+//  or functions as long you don't reassign on it.
 
+// Constructor properties. 
+//
 
 
 
