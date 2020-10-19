@@ -194,52 +194,164 @@ console.log((message[2]));
 console.log((message.includes('my')));
 
 //To see if it start with.
-//
 console.log((message.startsWith('This')));
 
+// To replace something
+console.log('To replace');
+console.log((message.replace('first','second')));
+console.log(message);
 
+// To see the string's length.
 console.log((message.length));
+// To see the type.
 console.log(typeof(another3));
 
+//To trim, remove all the external spaces......
+console.log(message.trim());
+
+// Escape notation.
+console.log('This is from thanos \n  him s powers glove');
+console.log('This is from thanos and \'  powers glove');
+
+console.log(message.split(' '));
+
+// Lesson 60 - Template Literals. ``
+console.log(("Welcome to lesson 60 - When the Template Literals Rock"));
+
+const another4 = `This is my 
+'first' message`;
+
+console.log(another4);
+// Now using the Template with $.
+const meuNome = 'Joao';
+const mensagem = ' Oi' + meuNome + ',\n';
+
+const outra = `Hi ${meuNome},
+
+Obrigado por fazer parte da nossa lista de email.
+Um forte Abraco,
+Mosh.` ; 
+
+console.log(outra);
+
+console.log("----------------------------------------------");
+// Lesson 61 - Dates.
+console.log('+++++++++Lesson 61, Dates in Javascript+++++++++++++');
+
+const now = new Date();
+const date1 = new Date('May 11 2018 09:00');
+console.log(date1);
+const date2 = new Date(2018,4,11, 9);
+console.log(date2);
+console.log('To Date String');
+console.log(now.toDateString());
+
+console.log('                ');
+// Lesson 62, Exercise. Address Object.
+console.log('Lesson 62 - Exercise...');
+console.log('                ');
+let address = {
+    street: 'Rua dos Cancioneiros',
+    city: 'Sao Paulo',
+    zipCode: '0230107023'
+};
+
+function showAddress(address){
+   for (let key in address) 
+    console.log(key, address[key]);
+}
+
+showAddress(address);
+
+console.log('                ');
+
+// Lesson 63. Factory and Construction Function.
+
+console.log('Lesson 63 - Exercise Factory and Construction Function...');
+console.log('                ');
+
+// Factory Function
+
+let address1 = createAddress('Rua das Oliveiras', 'Porto','39234234')
 
 
+console.log(address1);
+
+// Factory Function 
+
+function createAddress(street, city, zipCode) {
+    return {
+        street,
+        city,
+        zipCode
+    };
+}
+
+// Construction Function.
+
+let Address1 = CreateAddress('Rua das Oliveiras', 'Porto','39234234')
 
 
+console.log(Address1);
+
+function CreateAddress(street, city, zipCode) {
+    this.street = street;
+    this.city = city;
+    this.zipCode = zipCode;
+}
+
+// Lesson 65 - Blog Post Object
+console.log('     ')
+console.log('--------------Lesson 65 Blog Post Object ----------------')
+console.log('     ')
 
 
+let post = {
+    title: 'a',
+    body: 'b',
+    author: 'c',
+    views: 10,
+    comments: [
+        { author: 'a', body: 'b'},
+        { author: 'c', body: 'd'},
+    ],
+    isLive: true 
+};
+
+console.log(post);
+
+console.log('     ')
+console.log('--------------Lesson 66 Exercises Constructor Functions ----------')
+console.log('     ')
 
 
+let postagem = new Postagem('a','b','c');
+
+console.log(postagem);
+
+function Postagem(title, body, author){
+    this.title= title;
+    this.body=body;
+    this.author=author;
+    this.views=0;
+    this.comments=[];
+    this.isLive= false; 
+}
 
 
+console.log('     ')
+console.log('--------------Lesson 67 Exercise 6 , Price Range Objects ----------')
+console.log('     ')
 
+let priceRanges =  [
+    { label: '$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPerson:  10 },
+    { label: '$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson:  20 },
+    { label: '$$$', tooltip: 'Expensive', minPerPerson: 21, maxPerPerson:  50 },
+];
 
+let restaurants = [
+    { averagePerPerson: 5,  }
+]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(priceRanges);
+console.log(restaurants);
