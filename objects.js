@@ -23,11 +23,11 @@ cicle.draw(); //Method, because is related to an object.
 // Aka; oneTwoThreeFour
 
 
-function createCircle(radius){
-    return  {
+function createCircle(radius) {
+    return {
         radius,
-        draw(){
-        console.log('draw');
+        draw() {
+            console.log('draw');
         }
     };
 }
@@ -42,9 +42,9 @@ console.log(circle1)
 
 
 
-function Circle(radius){
+function Circle(radius) {
     this.radius = radius;
-    this.draw = function(){
+    this.draw = function () {
         console.log('draw');
     }
 }
@@ -81,7 +81,7 @@ console.log(Circle.constructor);
 
 let number = 10;
 
-function increase(number){
+function increase(number) {
     number++;
 }
 
@@ -96,7 +96,7 @@ console.log(number);
 
 const circle3 = {
     radius: 1,
-    draw(){
+    draw() {
         console.log('draw');
     }
 };
@@ -135,26 +135,28 @@ console.log("--------------------------")
 
 
 const circle4 = {
-    radius : 1,
-    draw(){
+    radius: 1,
+    draw() {
         console.log('draw');
     }
 };
 
 const another = {};
 
-    for (let key in circle4)
-        another[key]= circle4[key];
+for (let key in circle4)
+    another[key] = circle4[key];
 
 console.log(another);
-        
+
 //const another2 = Object.assign({color: 'yellow'},circle4);
 
 
 // The spread operator ...
 
 console.log("-------The spread operator-----------");
-const another2 = {...circle4};
+const another2 = {
+    ...circle4
+};
 
 
 console.log(another2);
@@ -186,7 +188,7 @@ const message = 'This is my first message';
 const another3 = new String('h1');
 // Lets show all types...
 
-console.log(typeof(message));
+console.log(typeof (message));
 console.log((message[1]));
 console.log((message[2]));
 
@@ -198,13 +200,13 @@ console.log((message.startsWith('This')));
 
 // To replace something
 console.log('To replace');
-console.log((message.replace('first','second')));
+console.log((message.replace('first', 'second')));
 console.log(message);
 
 // To see the string's length.
 console.log((message.length));
 // To see the type.
-console.log(typeof(another3));
+console.log(typeof (another3));
 
 //To trim, remove all the external spaces......
 console.log(message.trim());
@@ -230,7 +232,7 @@ const outra = `Hi ${meuNome},
 
 Obrigado por fazer parte da nossa lista de email.
 Um forte Abraco,
-Mosh.` ; 
+Mosh.`;
 
 console.log(outra);
 
@@ -241,7 +243,7 @@ console.log('+++++++++Lesson 61, Dates in Javascript+++++++++++++');
 const now = new Date();
 const date1 = new Date('May 11 2018 09:00');
 console.log(date1);
-const date2 = new Date(2018,4,11, 9);
+const date2 = new Date(2018, 4, 11, 9);
 console.log(date2);
 console.log('To Date String');
 console.log(now.toDateString());
@@ -256,9 +258,9 @@ let address = {
     zipCode: '0230107023'
 };
 
-function showAddress(address){
-   for (let key in address) 
-    console.log(key, address[key]);
+function showAddress(address) {
+    for (let key in address)
+        console.log(key, address[key]);
 }
 
 showAddress(address);
@@ -272,7 +274,7 @@ console.log('                ');
 
 // Factory Function
 
-let address1 = createAddress('Rua das Oliveiras', 'Porto','39234234')
+let address1 = createAddress('Rua das Oliveiras', 'Porto', '39234234')
 
 
 console.log(address1);
@@ -289,7 +291,7 @@ function createAddress(street, city, zipCode) {
 
 // Construction Function.
 
-let Address1 = CreateAddress('Rua das Oliveiras', 'Porto','39234234')
+let Address1 = CreateAddress('Rua das Oliveiras', 'Porto', '39234234')
 
 
 console.log(Address1);
@@ -311,11 +313,16 @@ let post = {
     body: 'b',
     author: 'c',
     views: 10,
-    comments: [
-        { author: 'a', body: 'b'},
-        { author: 'c', body: 'd'},
+    comments: [{
+            author: 'a',
+            body: 'b'
+        },
+        {
+            author: 'c',
+            body: 'd'
+        },
     ],
-    isLive: true 
+    isLive: true
 };
 
 console.log(post);
@@ -325,17 +332,17 @@ console.log('--------------Lesson 66 Exercises Constructor Functions ----------'
 console.log('     ')
 
 
-let postagem = new Postagem('a','b','c');
+let postagem = new Postagem('a', 'b', 'c');
 
 console.log(postagem);
 
-function Postagem(title, body, author){
-    this.title= title;
-    this.body=body;
-    this.author=author;
-    this.views=0;
-    this.comments=[];
-    this.isLive= false; 
+function Postagem(title, body, author) {
+    this.title = title;
+    this.body = body;
+    this.author = author;
+    this.views = 0;
+    this.comments = [];
+    this.isLive = false;
 }
 
 
@@ -343,17 +350,29 @@ console.log('     ')
 console.log('--------------Lesson 67 Exercise 6 , Price Range Objects ----------')
 console.log('     ')
 
-let priceRanges =  [
-    { label: '$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPerson:  10 },
-    { label: '$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson:  20 },
-    { label: '$$$', tooltip: 'Expensive', minPerPerson: 21, maxPerPerson:  50 },
+let priceRanges = [{
+        label: '$',
+        tooltip: 'Inexpensive',
+        minPerPerson: 0,
+        maxPerPerson: 10
+    },
+    {
+        label: '$$',
+        tooltip: 'Moderate',
+        minPerPerson: 11,
+        maxPerPerson: 20
+    },
+    {
+        label: '$$$',
+        tooltip: 'Expensive',
+        minPerPerson: 21,
+        maxPerPerson: 50
+    },
 ];
 
-let restaurants = [
-    { averagePerPerson: 5,  }
-]
+let restaurants = [{
+    averagePerPerson: 5,
+}]
 
 console.log(priceRanges);
 console.log(restaurants);
-
-

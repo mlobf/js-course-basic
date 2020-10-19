@@ -72,45 +72,20 @@ console.log('    ');
 console.log('----------------------------------------------------------------');
 
 
+console.log('    ');
+console.log('-----------Lesson 71 Finding Elements (References Types) --------');
+console.log('    ');
 
+const courses = [
+    { id: 1, name: 'a' },
+    { id: 2, name: 'b' },
+];
 
+const course = courses.find(function(course)  {
+    return course.name === 'a';
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(course);
 
 
 
