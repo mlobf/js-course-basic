@@ -88,6 +88,128 @@ const course = courses.find(function(course)  {
 console.log(course);
 
 
+console.log('    ');
+console.log('-----------Lesson 73 Arrow Functions  ------------------------------');
+console.log('    ');
+
+//Using as aka the last lesson, we will refact using Arrow Function
+
+const cursos = [
+    { id: 1, name: 'a' },
+    { id: 2, name: 'b' },
+];
+const curso = cursos.find(curso => curso.name=== 'a'); 
+console.log(curso);
+
+console.log('    ');
+console.log('-----------Lesson 74 Removing Elements  ------------------------------');
+console.log('    ');
+
+
+const numeros = [ 1,2,3,4];
+
+//Add
+//To add something at end of array.
+numeros.push();
+//To ass something at begining of array.
+numeros.unshift();
+//To add somenthing in the middle.
+numeros.splice();
+
+//Remove
+//To remove something at end of array.
+const last = numeros.pop();
+
+console.log('pop');
+console.log(numeros);
+console.log(last);
+
+//To remove  something at begining of array.
+const shift = numeros.shift();
+
+console.log('shift');
+console.log(numeros);
+console.log(shift);
+
+//To remove somenthing in the middle.
+console.log('splice');
+numeros.splice(2,1);
+console.log(numeros);
+
+console.log('    ');
+console.log('-----------Lesson 75 Emptying an Array  ------------------------------');
+console.log('    ');
+
+let num = [ 1,2,3,4]; 
+let another = num;
+
+//Soluction 1 Using let
+num = [];
+
+console.log('Soluction One')
+console.log(num);
+console.log(another);
+
+//Soluction Two.
+
+let nume = [ 1,2,3,4]; 
+
+//Mosh preference.
+nume.length = 0;
+console.log('Soluction Two');
+console.log(another);
+console.log(nume);
+
+//Soluction Three.
+//Using splice.
+
+let numer = [ 1,2,3,4]; 
+console.log('Soluction Three');
+numer.splice(0,numer.length);
+
+console.log(another);
+console.log(numer);
+
+//Soluction Four.
+//Using pop.
+
+console.log("Soluction Four")
+console.log("Das pop")
+
+n = [ 1,2,3,4];
+
+while (n.length > 0)
+    n.pop();
+
+console.log(another);
+console.log(numer);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
