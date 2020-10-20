@@ -285,6 +285,88 @@ console.log('    ');
 console.log('-----------Lesson 79 Sorting Arrays --------------------------');
 console.log('    ');
 
+//Using sort and output a string.
+
+const lesson79numbers = [2,1,4];
+lesson79numbers.sort();
+console.log(lesson79numbers);
+
+//Now using reverse.
+lesson79numbers.reverse();
+console.log(lesson79numbers);
+
+//These works well if only strings and numbers are evolved.
+//But to apply it to Objects, 
+
+const lesson79courses = [
+    {id:1 , name:   "Node JS"},
+    {id:3 , name:   "javascript"},
+];
+
+lesson79courses.sort(function(a,b) {
+    const nameA = a.name.toLowerCase();
+    const nameB = b.name.toLowerCase();
+
+    if (nameA < nameB) return -1;
+    if (nameA > nameB) return 1;
+    return 0;
+
+});
+
+console.log(lesson79courses);
+
+
+console.log('    ');
+console.log('-----------Lesson 80 Testing Elements of an Arrays --------------------------');
+console.log('    ');
+
+//Using .every -> The function will run thro all elements on array.
+const lesson80numbers = [1,-2,3];
+
+const allPositive = lesson80numbers.every(function(value) {
+    return value >= 0;
+});
+
+console.log(allPositive);
+
+//Using .some -> Will run until some element fit .
+
+const someallPositive = lesson80numbers.some(function(value) {
+    return value >= 0;
+});
+
+console.log(someallPositive);
+
+console.log('    ');
+console.log('-----------Lesson 81 Filtering Elements in Arrays --------------------------');
+console.log('    ');
+//How to filter elements in array base in search criteria.
+
+const lesson81numbers = [1,2,3,4,5,-4,20,-3];
+
+const newFiltedArray = lesson81numbers.filter(function(value){
+    return value >= 0;
+});
+
+console.log(newFiltedArray);
+//Now the same using arrows;
+
+const newArrowFiltedArray = lesson81numbers.filter(value => value >= 0);
+
+console.log(newArrowFiltedArray);
+
+console.log('    ');
+console.log('-----------Lesson 82 Mapping an Arrays --------------------------');
+console.log('    ');
+
+
+
+
+
+
+
+
+
 
 
 
