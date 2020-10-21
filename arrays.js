@@ -382,14 +382,27 @@ console.log('    ');
 
 const card = [1,2,3,4,5];
 //IMPORTANT - If we use for in instead for of, result will be an string rather then numbers.
+/*
 let sum = 0;
 for (let element of card)
     sum += element;
+*/
+//console.log(sum);
+//Now its time to refact this code using .reduce.
+//card.reduce()
+
+const sum = card.reduce(
+    (accumulator, currentValue) => accumulator + currentValue
+);
 
 console.log(sum);
-//Now its time to refact this code using .reduce.
 
-//card.reduce()
+
+
+
+
+
+
 
 
 
