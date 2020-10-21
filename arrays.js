@@ -461,7 +461,7 @@ console.log('    ');
 
 const lesson86numbers = [1, 2, 3, 4, 5];
 
-const output = except(lesson86numbers,[3,5]);
+const output = except(lesson86numbers, [3, 5]);
 console.log(output);
 
 function except(array, excluded) {
@@ -469,19 +469,116 @@ function except(array, excluded) {
     for (let element86 of array)
         if (!excluded.includes(element86))
             output.push(element86);
-        return output;
+    return output;
 }
 
 
 console.log('    ');
 console.log('-----------Lesson 87 Exercise 4 Moving an Element --------------------------');
 console.log('    ');
+//Create a function that moves an element in array.
+
+const numbers87 = [1, 2, 3, 4];
+
+const output87 = move(numbers87, 1, 3);
+
+console.log(output87);
+
+function move(array, index, offset) {
+    const position = index + offset;
+    if (position >= array.length || position < 0) {
+        console.error('Invalid offset.');
+        return;
+    }
+
+    const output87 = [...array];
+    const element87 = output87.splice(index, 1)[0];
+    output87.splice(position, 0, element87);
+    return output87;
+}
+
+console.log('    ');
+console.log('-----------Lesson 88 Exercise 5 Count Ocurrences --------------------------');
+console.log('    ');
+//Create a function that takes an array and and a search element.
+
+const number88 = [1, 2, 3, 4, 1, 1, 1, 1, 1, 1];
+const count = countOccurences(number88, 1);
+
+console.log(count);
+
+function countOccurences(array, searchElement) {
+    /*
+        let count = 0;
+        for (let element of array)
+            if (element === searchElement)
+                count++;
+        return count;
+    */
+    return array.reduce((accumulator, current) => {
+        const occurence = (current === searchElement) ? 1 : 0;
+        console.log(accumulator, current, searchElement);
+        return accumulator + occurence;
+    }, 0);
+}
+
+
+console.log('    ');
+console.log('-----------Lesson 89 Exercise 6 Get Max --------------------------');
+console.log('    ');
+//
+
+const numbers89 = [1, 2, 3, 4, 5, 6, 1212];
+const max = getMax(numbers89);
+
+console.log(max);
+
+function getMax(array) {
+    if (array.length === 0) return undefined;
+
+    return array.reduce((a, b) => (a > b) ? a : b);
+}
+
+
+console.log('    ');
+console.log('-----------Lesson 90 Exercise 7 Movies --------------------------');
+console.log('    ');
 //
 
 
+const movies = [{
+        title: 'a',
+        year: 2018,
+        rating: 4.5
+    },
+    {
+        title: 'b',
+        year: 2018,
+        rating: 4.7
+    },
+    {
+        title: 'c',
+        year: 2018,
+        rating: 3
+    },
+    {
+        title: 'd',
+        year: 2017,
+        rating: 4.5
+    },
+];
+
+//Get all the movies in 2018 with rating > 4
+//Sort then by the rating
+//In descending order
+//Pick the title and display on the console
+//The result should be B and A
+
+const titles = movies
+    .filter(m => m.year === 2018 && m.rating >= 4)
+    .sort((a, b) => a.rating - b.rating)
+    .reverse()
+    .map(m => m.title)
 
 
-
-
-
-
+console.log(titles);
