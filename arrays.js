@@ -358,34 +358,38 @@ console.log(newArrowFiltedArray);
 console.log('    ');
 console.log('-----------Lesson 82 Mapping an Arrays --------------------------');
 console.log('    ');
+// With map method we can map each element in array to something else.
 
 
+const lesson82numbers = [1,2,3,4,5,-4,20,-3];
+//First, filter any value greater then 0.
+const lesson82newArrowFiltedArray = lesson82numbers
+    .filter(value => value >= 0)
+    .map(n => ({value: n}))
+    .filter(obj => obj.value > 1)
+    .map( obj => obj.value);
+//Now, put the <li>.....
+//const mapItems = lesson82newArrowFiltedArray.map(n => '<li>' + n + '</li>');
+//Now....get out arrays and welcome strings.
+//const html = '<ul>'+ mapItems.join('') + '</ul>';
 
+console.log(lesson82newArrowFiltedArray);
 
+console.log('    ');
+console.log('-----------Lesson 83 Reducing an Arrays --------------------------');
+console.log('    ');
+//We will sum of all numbers in this array. Like doing the total of shopping card.
 
+const card = [1,2,3,4,5];
+//IMPORTANT - If we use for in instead for of, result will be an string rather then numbers.
+let sum = 0;
+for (let element of card)
+    sum += element;
 
+console.log(sum);
+//Now its time to refact this code using .reduce.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//card.reduce()
 
 
 
