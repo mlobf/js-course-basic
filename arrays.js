@@ -99,15 +99,10 @@ console.log('    ');
 
 //Using as aka the last lesson, we will refactor using Arrow Function
 
-const cursos = [{
-        id: 1,
-        name: 'a'
-    },
-    {
-        id: 2,
-        name: 'b'
-    },
-];
+const cursos = [
+    {id: 1,name: 'a'},
+    {id: 2, name: 'b'},
+    ];
 const curso = cursos.find(curso => curso.name === 'a');
 console.log(curso);
 
