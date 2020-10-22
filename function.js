@@ -39,6 +39,116 @@ function sum() {
 
 console.log(sum(1, 2, 3, 4, 5, 10));
 
-
 console.log("-----------Lesson 95 ---- The Rest Operator -------------");
 //To use a lot of paramets in function, use rest operator.
+// Rest operator will put all the arguments on array.
+// IMPORTANT the rest operator must be the last operator on function.
+function sumArg(discount, ...prices) {
+    const total = prices.reduce((a, b) => a + b);
+    return total * (1 - discount)
+}
+
+console.log(sumArg(0.1, 20, 30));
+
+console.log("-----------Lesson 96 ---- Default Parameters-------------");
+//With EC6 we have a better way to  archive this, as long as we use ....
+// .... a default value.
+// IMPORTANT => All values forward defaul value must be setted on equal way. 
+function interest(principal, rate = 3.5, years = 5) {
+    return principal * rate / 100 * years;
+}
+
+console.log(interest(10000, 3.5, 5));
+
+console.log("-----------Lesson 97 ---- Getters and Setters-------------");
+// getters => access properties
+// setters => to change them or mutate them.
+const person = {
+    firstName: 'Mosh',
+    lastName: 'Hamedani',
+    get fullName() {
+        return `${person.firstName} ${person.lastName}`;
+    },
+    set fullName(value) {
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+person.fullName = 'John Smith';
+console.log(person);
+
+console.log("-----------Lesson 98 ----  Try and Catch-------------");
+//Defensive programming: Using Error Handling to Avoid Bugs.
+
+const person98 = {
+    firstName: 'Mosh',
+    lastName: 'Hamedani',
+
+    set fullName98(value) {
+
+        if (typeof value !== 'string')
+            throw new Error('Value is not String.');
+
+        const parts = value.split(' ');
+        if (parts.length !== 2)
+            throw new Error('Enter a first and last name.');
+
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+
+try {
+    person98.fullName = '';
+} catch (e) {
+    alert(e);
+}
+console.log(person98);
+
+
+console.log("-----------Lesson 99 ----Local VS Global Scope -------------");
+//Scope of a varible can be set using Blocks for Local Scope.
+// Local Varibles have precedence over global varibles.
+//Global Scope.
+const color = "Red";
+//Local Scope
+function localScope() {
+    const message = "Hello Local Scope";
+    const color = "Blue";
+
+    console.log(message);
+    console.log(color);
+};
+// Global
+console.log(color);
+//Local
+localScope();
+
+console.log("-----------Lesson 100 ----Let VS Var -------------");
+// When using 'var' instead 'let', the scope is not limited by Blocks.
+// let and const create block-scope varibles.
+// var creates function-scope varables.
+
+
+function start() {
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+    };
+}
+
+start();
+
+console.log("-----------Lesson 101 ---- The 'this.' Key Word -------------");
+// What is "this"?
+// -> Is the object that is executing the current function. 
+// If a function is part of object = So is a method.
+// 
+
+
+
+
+
+
+
+
