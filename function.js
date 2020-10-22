@@ -143,12 +143,81 @@ console.log("-----------Lesson 101 ---- The 'this.' Key Word -------------");
 // What is "this"?
 // -> Is the object that is executing the current function. 
 // If a function is part of object = So is a method.
-// 
 
+//method -> obj
+//function -> global (window, global)
 
+const video = {
+    title: 'a',
+    tags: ['a', 'b', 'c'],
+    showTags() {
+        this.tags.forEach(function (tag) {
+            console.log(this.title, tag);
+        }, this);
+    }
+};
 
+video.showTags();
 
+console.log("-----------Lesson 102 ---- Changing the value of 'this' -------------");
+// Using arrow functions, they inherit the this value from the container function.
+//.call = Old Way
+//.apply = Old Way
+//.blind = Old Way
 
+const videos = {
+    title: 'a',
+    tags: ['a', 'b', 'c'],
+    showTag() {
+        this.tags.forEach(tag => {
+            console.log(this.title, tag);
+        });
+    }
+};
 
+videos.showTag();
 
+console.log("-----------Lesson 103 ---- Exercise 1 Sum of arguments -------------");
 
+console.log(sum103([1, 2, 3, 4]));
+
+function sum103(...items) {
+    if (items.length === 1 && Array.isArray(items[0]))
+        items = [...items[0]];
+    console.log(items);
+    return items.reduce((a, b) => a + b);
+}
+
+console.log("-----------Lesson 104 ---- Exercise 2 Area of Circle -------------")
+// We can not set area from outside, read only property.
+
+const circle = {
+    radius: 1,
+    get area() {
+        return Math.PI * this.radius * this.radius;
+
+    }
+};
+console.log(circle.area);
+
+console.log("-----------Lesson 105 ---- Exercise 3 Error Handling -------------");
+//Make some changes in order to be able to handling Errors related to wrog type parameters. 
+
+try {
+    const number = [1, 2, 3, 4];
+    const count = countOccurences(number, 1);
+    console.log(count);
+} catch (e) {
+    console.log(e.message);
+}
+
+function countOccurences(array, searchElement) {
+    if (!Array.isArray(array))
+        throw new Error('Invalid array.')
+
+    return array.reduce((accumulator, current) => {
+        const occurence = (current === searchElement) ? 1 : 0;
+        console.log(accumulator, current, searchElement);
+        return accumulator + occurence;
+    }, 0);
+}
