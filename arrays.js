@@ -332,7 +332,7 @@ console.log('    ');
 console.log('-----------Lesson 80 Testing Elements of an Arrays --------------------------');
 console.log('    ');
 
-//Using .every -> The function will run thro all elements on array.
+//Using .every -> The function will run throw all elements on array.
 const lesson80numbers = [1, -2, 3];
 
 const allPositive = lesson80numbers.every(function (value) {
@@ -402,7 +402,7 @@ for (let element of card)
     sum += element;
 */
 //console.log(sum);
-//Now its time to refact this code using .reduce.
+//Now its time to refactor this code using .reduce.
 //card.reduce()
 
 const sum = card.reduce(
@@ -495,7 +495,7 @@ function move(array, index, offset) {
 console.log('    ');
 console.log('-----------Lesson 88 Exercise 5 Count Ocurrences --------------------------');
 console.log('    ');
-//Create a function that takes an array and and a search element.
+//Create a function that takes an array and a search element.
 
 const number88 = [1, 2, 3, 4, 1, 1, 1, 1, 1, 1];
 const count = countOccurences(number88, 1);

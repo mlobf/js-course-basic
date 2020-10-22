@@ -23,7 +23,7 @@ console.log("-----------Lesson 92 ---- Hoisting -------------");
 // Topic
 //  Declare a Function before at function in self.
 //  If is a Function Declaration, OK.
-//  If is an Anonymus Function, NOT ALOWED.
+//  If is an Anonymus Function, NOT ALLOWED.
 // Hoisting is the process to move the function to the top of the file.
 
 console.log("-----------Lesson 94 ---- Arguments -------------");
@@ -40,7 +40,7 @@ function sum() {
 console.log(sum(1, 2, 3, 4, 5, 10));
 
 console.log("-----------Lesson 95 ---- The Rest Operator -------------");
-//To use a lot of paramets in function, use rest operator.
+//To use a lot of parameter in function, use rest operator.
 // Rest operator will put all the arguments on array.
 // IMPORTANT the rest operator must be the last operator on function.
 function sumArg(discount, ...prices) {
@@ -53,7 +53,7 @@ console.log(sumArg(0.1, 20, 30));
 console.log("-----------Lesson 96 ---- Default Parameters-------------");
 //With EC6 we have a better way to  archive this, as long as we use ....
 // .... a default value.
-// IMPORTANT => All values forward defaul value must be setted on equal way. 
+// IMPORTANT => All values forward default value must be set on equal way. 
 function interest(principal, rate = 3.5, years = 5) {
     return principal * rate / 100 * years;
 }
@@ -108,8 +108,8 @@ console.log(person98);
 
 
 console.log("-----------Lesson 99 ----Local VS Global Scope -------------");
-//Scope of a varible can be set using Blocks for Local Scope.
-// Local Varibles have precedence over global varibles.
+//Scope of a variable can be set using Blocks for Local Scope.
+// Local Variables have precedence over global variables.
 //Global Scope.
 const color = "Red";
 //Local Scope
@@ -127,8 +127,8 @@ localScope();
 
 console.log("-----------Lesson 100 ----Let VS Var -------------");
 // When using 'var' instead 'let', the scope is not limited by Blocks.
-// let and const create block-scope varibles.
-// var creates function-scope varables.
+// let and const create block-scope variables.
+// var creates function-scope variables.
 
 
 function start() {
@@ -201,7 +201,7 @@ const circle = {
 console.log(circle.area);
 
 console.log("-----------Lesson 105 ---- Exercise 3 Error Handling -------------");
-//Make some changes in order to be able to handling Errors related to wrog type parameters. 
+//Make some changes in order to be able to handling Errors related to wrong type parameters. 
 
 try {
     const number = [1, 2, 3, 4];
