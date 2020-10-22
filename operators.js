@@ -13,7 +13,7 @@ console.log(" Increment ++ ")
 console.log(x++);
 console.log(x);
 
-//Decrement
+//Decrements
 console.log(" Decrement -- ")
 console.log(--x);
 
