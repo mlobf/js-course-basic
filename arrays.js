@@ -577,3 +577,6 @@ const titles = movies
 
 
 console.log(titles);
+
+const title = 2;
+
