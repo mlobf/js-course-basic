@@ -15,6 +15,7 @@ let run = function walk() {
 let run1 = function () {
     console.log('run');
 }
+
 let move = run1;
 run1();
 move();
