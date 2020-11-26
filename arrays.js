@@ -574,7 +574,7 @@ const titles = movies
     .sort((a, b) => a.rating - b.rating)
     .reverse()
     .map(m => m.title)
-
+// Teste 123
 
 console.log(titles);
 
