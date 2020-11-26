@@ -9,8 +9,7 @@ function walk() {
 // Named Function Expression.
 let run = function walk() {
     console.log('run');
-}
-
+} 
 //Anonymus Function Expression.
 let run1 = function () {
     console.log('run');
