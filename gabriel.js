@@ -14,11 +14,11 @@ let urlVar = [{
 
 console.log("Using for in ");
 
-for (let number in urlVar) {
-    console.log(
-        urlVar.map( ) => number.url
-        );
-}
+for (let urls in urlVar) {
+    console.log(urls[])
+};
+
+
 
 
 //    .map(m => m.title)

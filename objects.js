@@ -15,7 +15,7 @@ const cicle = {
 };
 
 cicle.draw(); //Method, because is related to an object.
-// If our object had logic we have to use an different way to create them.
+// If our object had logic you must use an different way to create them.
 // This can be made with factoring or constructors.
 
 // Factoring Functions.
