@@ -576,6 +576,7 @@ const titles = movies
     .map(m => m.title)
 // Teste 123
 
+
 console.log(titles);
 
 const title = 2;
